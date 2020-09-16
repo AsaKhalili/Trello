@@ -4,17 +4,28 @@ body{
   font-family: sans-serif;
   font-size: 16px;
   background: #2261eb; 
+/*	height: 100%;*/
+/*	width: 100%;*/
+/*	overflow-x: scroll;*/
 }
 
 * {
   box-sizing: border-box;
 }
 
-/*
 .container-fluid{
-    display: inline-block;
-}
+	height: 722.531px;
+	width: 100%;
+/*
+	width: 100%;
+	display: block;
+	max-width: 1450px;
+	margin: 0px auto;
 */
+	
+/*	overflow-x: scroll;*/
+/*	position: absolute;*/
+}
 
 .clearfix{
   clear: both;
@@ -78,10 +89,10 @@ body{
 }
 
 .icons-right {
-    float: right;
-    margin-top: 10px;
-    margin-right: 4px;
-    border: 0px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 4px;
+	border: 0px;
 }
 
 
@@ -166,9 +177,19 @@ body{
 }
 
 .content {
+	width: 1440px;
+/*	max-width: 1440px;*/
   height: calc(100vh - 115px);
+/*	max-height: 700px;*/
   padding: 0px 10px;
-  display: inline-block;
+/*  display: inline-block;*/
+/*	width: 1440px;*/
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+/*	position: fixed;*/
+/*	overflow-x: scroll;*/
+/*	overflow-y: hidden;*/
 }
 
 .task-box {
@@ -177,9 +198,13 @@ body{
   padding: 10px 10px;
   border-radius: 5px;
   width: 250px;
-  float: left;
+/*  float: left;*/
   overflow: auto;
-  height: calc(100vh - 200px);
+  height: 550px;
+/*	calc(100vh - 200px)*/
+	margin-left: 10px; 
+/*	position: relative;*/
+/*	white-space: nowrap;*/
 }
 
 .task-box h4{
@@ -187,7 +212,7 @@ body{
 }
 
 .task-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 .task-list li{
@@ -200,7 +225,7 @@ body{
 
 .btn-add-task {
 	background: #8080804f;
-	width: 100%;
+	width: 200px;
 	border: none;
 	height: 27px;
 	text-align: left;
@@ -208,49 +233,65 @@ body{
 	font-weight: 700;
 	font-size: 14px;
 	border-radius: 5px;
-
+/*	float: left;*/
+/*	display: inline-block;*/
+/*	position: fixed;*/
 }
 
 .add-list{
   display: inline-block;
   padding: 10px 10px;
   border-radius: 5px;
-  width: 250px;
-		
-  float: left;
-  overflow: auto;
+  width: 100%;
+/*  float: left;*/
+/*  overflow: auto;*/
   margin: -7px 2px;
+	vertical-align: top;
+/*	position: fixed;*/
 }
 
 
 .btn-add-list {
-  width: 100%;
+  width: 300px;
   display: inline-block;
   background-color: #0f4ca83b;
   border: 10px;
   border-radius: 6px;
   height: 44px;
   color: white;
-  float: left;
-  overflow: auto;
+/*  float: left;*/
+/*  overflow: auto;*/
 }
 
-::-webkit-scrollbar {
+.task-box::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+.task-box::-webkit-scrollbar-track {
   background: #fefefe; 
   border-radius: 5px;
 }
 
 
-::-webkit-scrollbar-thumb {
+.task-box::-webkit-scrollbar-thumb {
   background: #706c6c; 
-  border-radius: 10px
+  border-radius: 10px;
 }
 
-
-::-webkit-scrollbar-thumb:hover {
+.task-box::-webkit-scrollbar-thumb:hover {
   background: #2a29a2; 
+}
+
+.content::-webkit-scrollbar{
+	width: 5px;
+}
+
+.content::-webkit-scrollbar-track{
+	background: #57696f5c;
+	border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #3f7dbfb5; 
+	border-radius: 5px;
 }
